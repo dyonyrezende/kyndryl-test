@@ -20,7 +20,7 @@
 
       <div style="text-align: right">
         <span v-if="this.status == 'inactive'" class="inactive-warning">Usuários inativos não podem fazer comentários</span>
-        <button class="btn-comment" @click="test">Comentar</button>
+        <button v-if="this.status == 'active'" class="btn-comment" @click="test">Comentar</button>
       </div>
 
     </div>

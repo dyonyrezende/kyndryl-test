@@ -5,6 +5,7 @@
     <new-post :userName="profileUserName" :userId="this.$route.params.id">
     </new-post>
 
+    
     <div v-for="post in posts" :key="post.id">
       <post :postId="post.id" :status="profileUserStatus" :userName="post.user_name" :userStatus="post.user_status" :title="post.title" :body="post.body"></post>
     </div>
@@ -32,7 +33,7 @@ export default {
   
   data() {
     return {
-      posts: [],
+      posts: {},
       interval: 0,
       profileUserStatus: '',
       profileUserName: '',
@@ -70,10 +71,15 @@ export default {
 
             axios.get('https://gorest.co.in/public/v2/users/' + element.user_id)
               .then( (response) => {
-
-                element['user_name'] = response.data.name
-                element['user_status'] = response.data.status   
-                this.posts[key] = element 
+                
+                this.posts[key] = {
+                  user_name: response.data.name,
+                  user_status: response.data.status,
+                  id: element.id,
+                  user_id: element.user_id,
+                  body: element.body,
+                  title: element.title
+                } 
                 
               }).catch(() => {
                 console.log('Details not found for user:' + element.user_id)
