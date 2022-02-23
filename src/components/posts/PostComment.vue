@@ -1,16 +1,14 @@
 <template>
-  <div class="container">
-    <img class="user-photo" src="./../../../public/user.png">
-    <span :class="[ this.userStatus == 'inactive' ? inactiveClass : activeClass ]">{{ this.userName }} {{ this.userStatus == 'inactive' ? '(Usuário Inativo)' : '' }}</span>
-   
+  <div class="container-comment">
     <div>
-      <div class="post-title">
-        {{ this.title }}
-      </div>
-      <div class="post-body">
-        {{ this.body }}
+      <img class="user-photo" src="./../../../public/user.png">
+      <div>
+        <span class="text">{{ this.userName }}</span>      
+        <br>        
+        <span class="text-comment">{{ this.body }}</span>
       </div>
     </div>
+
     
   </div>
 </template>
@@ -18,10 +16,8 @@
 <script>
 export default {
   props: [
-    'title', 
     'body', 
-    'userName',
-    'userStatus'
+    'userName'
   ],
   data() {
     return {
@@ -34,14 +30,16 @@ export default {
 
 <style scoped>
 
-.container {
-  border-radius: 18px;
+.container-comment {
+  border-radius: 3rem;
   box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.25);
-  padding: 1.5rem;
+  padding: 2%;
+  padding-left: 4%;
   margin: auto;
-  max-width: 40rem;
-  background-color: #3a3a3a;
-  margin-top: 2%;
+  min-height: 3.5rem;
+  max-width: 100%;
+  background-color: #525252;
+  margin-top: 1%;
 }
 
 .post-title {
@@ -71,13 +69,22 @@ export default {
 
 
 .user-photo {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  float: left;
 }
 
 .text {
   font-size: 13px;
   color: white;
+  font-family: sans-serif;
+  padding-left: 2%;
+  vertical-align: top;
+}
+
+.text-comment {
+  font-size: 13px;
+  color: #c5c5c5;
   font-family: sans-serif;
   padding-left: 2%;
   vertical-align: top;

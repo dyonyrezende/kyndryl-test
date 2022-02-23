@@ -44,12 +44,7 @@ export default {
         } 
 
       axios.put('https://gorest.co.in/public/v2/users/' + userId, data, headers)
-        .then(() => {
-
-          this.$emit('statusChange')
-
-        }).catch((err) => {
-          
+        .catch((err) => {
           console.log(err)
         });
 

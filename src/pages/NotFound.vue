@@ -1,11 +1,9 @@
 <template>
-  <section>
-    <base-card>
-      <h2>Page not found</h2>
+  <section style="color: white">
+      <h2>Página não encontrada</h2>
       <p>
-        This page could not be found - maybe check out all our
-        <router-link to="/coaches">coaches</router-link>.
+        Página do usuário não encontrada
+        <router-link to="/"><span style="color: red">Login</span></router-link>.
       </p>
-    </base-card>
   </section>
 </template>

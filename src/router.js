@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Posts from './pages/posts/Posts.vue';
+import Posts from './pages/Posts.vue';
 import Login from './pages/Login.vue';
 import NotFound from './pages/NotFound.vue';
+import Profile from './pages/Profile.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,7 +14,11 @@ const router = createRouter({
       path: '/user/:id/posts',
       component: Posts
     },
-    { path: '/:notFound(.*)', component: NotFound }
+    {
+      path: '/user/:id/profile',
+      component: Profile
+    },
+    { path: '/notFound', component: NotFound }
   ]
 });
 
