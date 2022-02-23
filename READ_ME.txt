@@ -2,11 +2,12 @@ Requisitos para execução do projeto em servidor local:
 
 - NodeJS instalado - link para download: ( https://nodejs.org/en/ )
 - VueJs CLI - manual para instalação: ( https://cli.vuejs.org/guide/installation.html )
-- Vue-Router - manual para instalação: ( https://router.vuejs.org/installation.html )
 
 Com os requisitos instalados, utilizando o terminal, acesse o diretório do projeto e rode os comandos:
 
-- npm isntall - fara download das dependências
+- npm install --save vue-router (Irá fazer a instalação do router)
+- npm install axios (Instalação do Axios)
+- npm isntall - Download das dependências
 - npm run serve - iniciará o servidor local
 
 o servidor irá rodar em: http://localhost:8080 (verifique se a porta não está em uso)
