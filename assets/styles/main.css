@@ -1,0 +1,466 @@
+.label {
+    display: block;
+    font-size: 12px;
+    padding-top: 2px;
+    margin-top: 3%;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .input-text-comment {
+    background-color: #525252;
+    border: solid thin #7a7a7a;
+    color: #222222;
+    width: 100%;
+    padding: 2%;
+    margin-top: 1%;
+    height: 4rem;
+    border-radius: 10px;
+    color: #c5c5c5;
+  }
+  
+  .inactive-warning {
+    font-size: 12px;
+    color: #bebebe;
+    font-family: sans-serif;
+    padding-right: 2%;
+  }
+  
+  .btn-comment {
+    background-color: #969696;
+    border-radius: 10px;
+    width: 90px;
+    height: 20px;
+    color: white;
+    margin-top: 1%;
+      border: none;
+      padding: 0;
+      font-family: sans-serif;
+    font-size: 12px;
+    margin-bottom: 2%;
+      cursor: pointer;
+      outline: inherit;
+    transition: 0.3s;
+  }
+  
+  .btn-comment:hover {
+    background-color: #2c2c2c;
+    color: white;
+  }
+  
+  .input-text-comment:focus {
+    border: solid thin #c4c4c4;
+    outline: none;
+    width: 100%
+  }
+  
+  .container {
+    border-radius: 18px;
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem;
+    margin: auto;
+    max-width: 40rem;
+    background-color: #3a3a3a;
+    margin-top: 2%;
+  }
+  
+  .post-title {
+    background-color: #525252;
+    border: solid thin #7a7a7a;
+    color: white;
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 14px;
+    margin-top: 1%;
+    border-radius: 10px;
+  }
+  
+  .post-body {
+    background-color: #525252;
+    border: solid thin #7a7a7a;
+    color: #c5c5c5;
+    width: 100%;
+    padding: 2%;
+    font-size: 14px;
+    margin-top: 1%;
+    border-radius: 10px;
+  }
+  
+  .line {
+    border-bottom: solid thin #7a7a7a;
+    margin-top: 3%;
+  }
+  
+  .user-photo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .text {
+    font-size: 13px;
+    color: white;
+    font-family: sans-serif;
+    padding-left: 2%;
+    vertical-align: top;
+  }
+  
+  .text-inactive {
+    font-size: 13px;
+    color: #c5c5c5;
+    font-family: sans-serif;
+    padding-left: 2%;
+    vertical-align: top;
+  }
+
+  
+.container-comment {
+  border-radius: 3rem;
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.25);
+  padding: 2%;
+  padding-left: 4%;
+  margin: auto;
+  min-height: 3.5rem;
+  max-width: 100%;
+  background-color: #525252;
+  margin-top: 1%;
+}
+
+.user-photo-comment {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.text-comment {
+  font-size: 13px;
+  color: #c5c5c5;
+  font-family: sans-serif;
+  padding-left: 2%;
+  vertical-align: top;
+}
+
+
+
+/* NEW POST CSS*/
+
+.btn-create {
+  background-color: #2c2c2c;
+  box-shadow: 0 0 4px 1px rgba(211, 211, 211, 0.25);
+  border-radius: 10px;
+  width: 110px;
+  height: 25px;
+  color: white;
+  margin-top: 3%;
+	border: none;
+	padding: 0;
+	font-family: sans-serif;
+  font-size: 12px;
+	cursor: pointer;
+	outline: inherit;
+  transition: 0.3s;
+}
+
+.btn-create:hover {
+  background-color: #969696;
+  color: white;
+}
+
+.input-post {
+  background-color: #525252;
+  border: solid thin #7a7a7a;
+  color: #222222;
+  width: 40%;
+  padding: 2%;
+  height: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  margin-top: 1%;
+  color: #c5c5c5;
+  font-weight: bold;
+}
+
+.input-text-area {
+  background-color: #525252;
+  border: solid thin #7a7a7a;
+  color: #222222;
+  width: 100%;
+  padding: 2%;
+  margin-top: 1%;
+  border-radius: 10px;
+  color: #c5c5c5;
+}
+
+.input-text-area:focus {
+  border: solid thin #c4c4c4;
+  outline: none;
+  width: 100%
+}
+
+.input-post:focus {
+  border: solid thin #c4c4c4;
+  outline: none;
+  width: 100%
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+}
+
+.text {
+  font-size: 13px;
+  color: white;
+  font-family: sans-serif;
+  padding-left: 2%;
+  vertical-align: top;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  padding-top: 2px;
+  margin-top: 3%;
+  color: white;
+  font-family: sans-serif;
+}
+
+.error-message {
+  background-color: rgb(212, 138, 138);
+  border-radius: 5px;
+  color: red;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 11px;
+  margin-top: 1%;
+}
+
+.success-message {
+  background-color: rgb(167, 248, 187);
+  border-radius: 5px;
+  color: rgb(5, 92, 20);
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 11px;
+  margin-top: 1%;
+}
+
+
+/* LOGIN FORM CSS */
+.input-text-form {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 12px;
+  height: 25px;
+}
+
+.label-login {
+  display: block;
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.card {
+  border-radius: 18px;
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  margin: auto;
+  max-width: 32rem;
+  background-color: #646464;
+  margin-top: 15%;
+}
+
+.btn-login {
+  background-color: #969696;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 80px;
+  height: 25px;
+  color: white;
+	border: none;
+	padding: 0;
+	font-family: sans-serif;
+  font-size: 12px;
+	cursor: pointer;
+	outline: inherit;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #2c2c2c;
+  color: #969696;
+}
+
+.btn-new-user:hover {
+  background-color: #969696;
+}
+
+.btn-new-user {
+  margin-left: 2%;
+  background-color: #2c2c2c;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: white;
+  width: 110px;
+  height: 25px;
+  border: none;
+	padding: 0;
+	font-family: sans-serif;
+  font-size: 12px;
+	cursor: pointer;
+	outline: inherit;
+  transition: 0.3s;
+}
+
+.btn-container {
+  text-align: right;
+  padding-top: 5px;
+}
+
+.error-message-login {
+  background-color: rgb(212, 138, 138);
+  border-radius: 5px;
+  color: red;
+  padding-left: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+
+/* NEW USER form */
+
+.error-message-new-user {
+  background-color: rgb(212, 138, 138);
+  border-radius: 5px;
+  color: red;
+  padding-left: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+
+.success-message-new-user {
+  background-color: rgb(138, 212, 171);
+  border-radius: 5px;
+  color: rgb(2, 87, 6);
+  padding-left: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.show-login-id {
+  background-color: rgb(138, 212, 171);
+  border-radius: 5px;
+  color: rgb(2, 87, 6);
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.gender-container {
+  display: flex;
+  margin-top: 2%;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(255, 255, 255); /* Fallback color */
+  background-color: rgba(255, 255, 255, 0.4); /* Black w/ opacity */
+}
+
+.radio-gender {
+  margin-left: 0.4rem;
+}
+
+.input-text-form-new-user {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 12px;
+  height: 25px;
+}
+
+.label-new-user {
+  display: block;
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.card-new-user {
+  border-radius: 18px;
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  margin: auto;
+  max-width: 25rem;
+  background-color: #646464;
+  margin-top: 12%;
+}
+
+.btn-create-user {
+  background-color: #969696;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 100px;
+  height: 25px;
+  color: white;
+	border: none;
+	padding: 0;
+	font-family: sans-serif;
+  font-size: 12px;
+	cursor: pointer;
+	outline: inherit;
+  transition: 0.3s;
+}
+
+.btn-create-user:hover {
+  background-color: #2c2c2c;
+  color: #969696;
+}
+
+.btn-close:hover {
+  background-color: #969696;
+}
+
+.btn-close {
+  margin-left: 2%;
+  background-color: #2c2c2c;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: white;
+  width: 90px;
+  height: 25px;
+  border: none;
+	padding: 0;
+	font-family: sans-serif;
+  font-size: 12px;
+	cursor: pointer;
+	outline: inherit;
+  transition: 0.3s;
+}
+
+.btn-container-new-user {
+  text-align: right;
+  padding-top: 5px;
+}
