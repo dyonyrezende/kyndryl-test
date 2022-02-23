@@ -91,15 +91,15 @@ export default {
             'Authorization': 'Bearer ' + '84e64107e4ddd45adeb21fb85978690ed0b9750f8f10d15d7bd2bb13ea0f447d'
             }
         }).then((response) => {
-          if (response.status == 201) {
-            this.loginId = response.data.id;
-            this.userCreated = true;
-            this.newUserName = '';
-            this.newUserEmail = '';
-            this.newUserGender = '';
-          } else {
-            this.errorCreatingUser = true;
-          }
+      
+          this.loginId = response.data.id;
+          this.userCreated = true;
+          this.newUserName = '';
+          this.newUserEmail = '';
+          this.newUserGender = '';
+          
+        }).catch(() => {
+          this.errorCreatingUser = true;
         });
 
 

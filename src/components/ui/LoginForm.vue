@@ -56,6 +56,10 @@ export default {
 
         }).catch(() => {
           this.error = true
+
+          setInterval(() => {
+            this.error = false;
+          }, 10000);
           console.log('user not found')
         });
 
