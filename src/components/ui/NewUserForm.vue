@@ -1,9 +1,10 @@
 <template>
   <div class="modal" v-if="showModal">
-    <div class="card-new-user">
+    <div id="new-user-form" class="card-new-user">
+
       <label for="newUserName" class="label-new-user">Nome do Usuário</label>
-      <input type="text" id="newUserName" class="input-text-form-new-user" v-model="newUserName">
-      <div v-if="noUserNameError" class="error-message-new-user">Nome de usuário é obrigatório.</div>
+      <input type="text" id="new-user-name" class="input-text-form-new-user" v-model="newUserName">
+      <div id="username-error" v-if="noUserNameError" class="error-message-new-user">Nome de usuário é obrigatório.</div>
 
       <label for="newUserEmail" class="label-new-user">Email do Usuário</label>
       <input type="text" id="newUserEmail" class="input-text-form-new-user" v-model="newUserEmail">
@@ -15,15 +16,18 @@
           <input type="radio" class="radio-gender" name="gender" value="2" v-model="newUserGender">
           <label class="label-new-user" for="inactive">Feminino</label>
       </div>
-      <div v-if="noUserGenderError" class="error-message-new-user">Sexo não selecionado.</div>
 
+      <div v-if="noUserGenderError" class="error-message-new-user">Sexo não selecionado.</div>
       <div v-if="errorCreatingUser" class="error-message-new-user">Erro ao tentar criar o usuário.</div>
       <div v-if="userCreated" class="success-message-new-user">Usuário criado com sucesso.</div>
+
       <div v-if="loginId != ''" class="show-login-id">Seu ID para login é: {{ loginId }}</div>
+
       <div class="btn-container-new-user">
-        <button class="btn-create-user" @click="createNewUser">Criar Usuário</button>
-        <button class="btn-close" @click="$emit('closeModal')">Fechar</button>
+        <button id="create-user" class="btn-create-user" @click="createNewUser">Criar Usuário</button>
+        <button id="btn-close" class="btn-close" @click="$emit('closeModal')">Fechar</button>
       </div>
+
     </div>
   </div>
 </template>

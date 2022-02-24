@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div id="new-post-container" class="container">
     <img class="user-photo" src="./../../../public/user.png">
     <span class="text">{{ this.userName }}</span>
    
     <div>
       <label class="label">Titulo da Publicação</label>
-      <input class="input-post" type="text" v-model="postTitle">
-      <div v-if="noTitleError" class="error-message">Titulo é obrigatório.</div>
+      <input id="post-title" class="input-post" type="text" v-model="postTitle">
+      <div id="title-error" v-if="noTitleError" class="error-message">Titulo é obrigatório.</div>
       <br>
 
       <label class="label">Texto da Publicação</label>
@@ -18,7 +18,7 @@
       <div v-if="sucessCreatedPost" class="success-message">Publicação criada com sucesso.</div>
 
       <div style="text-align: right">
-        <button class="btn-create" @click="createPost">Publicar</button>
+        <button id="new-post-btn" class="btn-create" @click="createPost">Publicar</button>
       </div>
     </div>
     

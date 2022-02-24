@@ -5,11 +5,11 @@
     <label for="userEmail" class="label-login">Email do Usuário</label>
     <input type="text" id="userEmail" class="input-text-form" v-model="email">
 
-    <div v-if="!loginIsValid" class="error-message">Email ou ID não preenchidos ou inválidos.</div>
+    <div id="email-id-error" v-if="!loginIsValid" class="error-message">Email ou ID não preenchidos ou inválidos.</div>
     <div v-if="error" class="error-message-login">Erro no retorno da requisição, tente realizar o login com um usuário padrão cadastrado na API.</div>
     <div class="btn-container">
-      <button class="btn-login" @click="login()">Login</button>
-      <button class="btn-new-user" @click="changeModalStatus(true)">Novo Usuário</button>
+      <button id="btn-login" class="btn-login" @click="login()">Login</button>
+      <button id="btn-new-user" class="btn-new-user" @click="changeModalStatus(true)">Novo Usuário</button>
     </div>
   </div>
   <new-user-form @close-modal="changeModalStatus(false)" :showModal="showModal"></new-user-form>

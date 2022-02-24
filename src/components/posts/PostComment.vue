@@ -1,11 +1,11 @@
 <template>
-  <div class="container-comment">
+  <div id="comment-container" class="container-comment">
     <div>
       <img class="user-photo-comment" src="./../../../public/user.png">
       <div>
-        <span class="text">{{ this.userName }}</span>      
+        <span id="user-name" class="text">{{ this.userName }}</span>      
         <br>        
-        <span class="text-comment">{{ this.body }}</span>
+        <span id="comment-content" class="text-comment">{{ this.body }}</span>
       </div>
     </div>
 

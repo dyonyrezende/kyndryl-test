@@ -1,5 +1,5 @@
 <template>
-  <div v-if="readyToRender" class="container">
+  <div id="post-container" v-if="readyToRender" class="container">
     <img class="user-photo" src="./../../../public/user.png">
     <span :class="[ this.userStatus == 'inactive' ? inactiveClass : activeClass ]">{{ this.userName }} {{ this.userStatus == 'inactive' ? '(Usuário Inativo)' : '' }}</span>
    
