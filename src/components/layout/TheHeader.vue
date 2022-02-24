@@ -16,6 +16,7 @@
       <label for="active">Ativo</label>
       <input type="radio" class="radio-status" name="status" id="inactive" :checked="this.status == 'inactive'" @click="changeStatus('inactive', this.$route.params.id)">
       <label for="inactive">Inativo</label>
+      <img @click="logout" class="logout-icon" src="./../../../public/logout.png">
     </div>
   </header>
 </template>
@@ -30,6 +31,9 @@ export default {
     };
   },
   methods: {
+    logout() {
+      this.$router.replace('/');
+    },
 
     changeStatus(status, userId) {
       const axios = require('axios');
@@ -108,5 +112,19 @@ li {
 
 .radio-status {
   margin-left: 1rem;
+}
+
+.logout-icon {
+  width: 5%;
+  height: 5%;
+  filter: invert(100%);
+  margin-left: 8%;
+  transition: all 0.3s ease-in-out
+
+}
+
+.logout-icon:hover {
+  cursor: pointer;
+  filter: invert(50%);
 }
 </style>
