@@ -88,7 +88,13 @@ export default {
     getPostComments() {
       const axios = require('axios');
 
-      axios.get('https://gorest.co.in/public/v2/posts/' + this.postId + '/comments')
+       let headers = {
+        headers: {
+          'Authorization': 'Bearer ' + '84e64107e4ddd45adeb21fb85978690ed0b9750f8f10d15d7bd2bb13ea0f447d'
+          }
+      }
+
+      axios.get('https://gorest.co.in/public/v2/posts/' + this.postId + '/comments', headers)
         .then( (response) => {
             response.data.forEach((e, key) => {
               this.comments[key] = e

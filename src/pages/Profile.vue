@@ -38,14 +38,14 @@ export default {
     Post
   },
   
-  beforeMount() {
+  mounted() {
     this.profileUser();
 
-    this.getPosts();
+    this.getUserPosts();
 
     setInterval(() => {
-      this.getPosts()
-    }, 10000);
+      this.getUserPosts()
+    }, 30000);
   },
   
   data() {
@@ -64,7 +64,13 @@ export default {
 
       const axios = require('axios');
 
-      axios.get('https://gorest.co.in/public/v2/users/' + userId)
+       let headers = {
+        headers: {
+          'Authorization': 'Bearer ' + '84e64107e4ddd45adeb21fb85978690ed0b9750f8f10d15d7bd2bb13ea0f447d'
+          }
+      }
+
+      axios.get('https://gorest.co.in/public/v2/users/' + userId, headers)
         .then( (response) => {
           this.profileUserStatus = response.data.status
           this.profileUserName = response.data.name
@@ -76,10 +82,17 @@ export default {
         
     },
 
-    getPosts() {
+    getUserPosts() {
       const axios = require('axios');
 
-      axios.get('https://gorest.co.in/public/v2/users/' + this.$route.params.id + '/posts')
+
+       let headers = {
+        headers: {
+          'Authorization': 'Bearer ' + '84e64107e4ddd45adeb21fb85978690ed0b9750f8f10d15d7bd2bb13ea0f447d'
+          }
+      }
+
+      axios.get('https://gorest.co.in/public/v2/users/' + this.$route.params.id + '/posts', headers)
         .then( (res) => {
           let obj = res.data;
 
@@ -87,7 +100,7 @@ export default {
 
           obj.forEach((element, key) => {
 
-            axios.get('https://gorest.co.in/public/v2/users/' + element.user_id)
+            axios.get('https://gorest.co.in/public/v2/users/' + element.user_id, headers)
               .then( (response) => {
                 
                 this.posts[key] = {

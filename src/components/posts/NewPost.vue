@@ -78,7 +78,7 @@ export default {
       }
       
 
-      axios.get('https://gorest.co.in/public/v2/users/' + this.userId)
+      axios.get('https://gorest.co.in/public/v2/users/' + this.userId, headers)
         .then( (response) => {
           if (response.data.status == 'inactive') {
             this.userInactiveError = true;
@@ -94,6 +94,8 @@ export default {
                   this.sucessCreatedPost = true;
                   this.postTitle = '';
                   this.postContent = '';
+
+                  this.$emit('postCreated');
 
                   setTimeout(() => {
                     this.sucessCreatedPost = false;

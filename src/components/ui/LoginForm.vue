@@ -45,7 +45,13 @@ export default {
         return;
       }
 
-      axios.get('https://gorest.co.in/public/v2/users/' + this.userId)
+      let headers = { 
+        headers: {
+          'Authorization': 'Bearer ' + '84e64107e4ddd45adeb21fb85978690ed0b9750f8f10d15d7bd2bb13ea0f447d'
+          }
+        } 
+
+      axios.get('https://gorest.co.in/public/v2/users/' + this.userId, headers)
         .then( (res) => {
           if (res.data.email != this.email) {
             this.loginIsValid = false;
