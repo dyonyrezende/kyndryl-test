@@ -53,7 +53,7 @@ export default {
       posts: {},
       interval: 0,
       profileUserStatus: '',
-      profileUserName: '',
+      profileUserName: 'commit de teste',
       profileUserEmail: ''
     }
   },
